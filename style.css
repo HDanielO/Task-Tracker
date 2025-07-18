@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+body {
+  background-color: cadetblue;
+}
+
+.taskTrackerSection {
+  background-color: white;
+  width: 90%;
+  margin: 5em auto;
+  padding: 1em 0.75em;
+  max-width: 400px;
+  height: auto;
+}
+
+.inputLayout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  padding: 0.15em;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.textInput {
+  border: none;
+  outline: none;
+  width: 92%;
+  font-size: 0.85rem;
+}
+
+.fa-left-long {
+  background-color: black;
+  color: white;
+  padding: 0.25em;
+  width: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fa-left-long:hover {
+  background-color: rgb(123, 123, 123);
+}
+
+.taskLayout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(123, 123, 123);
+  padding: 0.5em 0;
+  cursor: pointer;
+}
+
+.taskLayoutRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+
+.taskContent{
+  font-size: 0.75rem;
+}
+
+
+.taskLayout .fa-square.fa-solid,
+.taskCompleteLayout .fa-square.fa-regular {
+  display: none;
+}
+
+.taskCompleteLayout .fa-square.fa-solid {
+  display: block;
+  color: rgb(123, 123, 123);
+}
+
+.taskCompleteLayout .taskContent {
+  color: rgb(123, 123, 123);
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+
