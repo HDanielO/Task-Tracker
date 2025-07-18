@@ -68,11 +68,9 @@ body {
   gap: 0.5em;
 }
 
-
-.taskContent{
+.taskContent {
   font-size: 0.75rem;
 }
-
 
 .taskLayout .fa-square.fa-solid,
 .taskCompleteLayout .fa-square.fa-regular {
@@ -90,4 +88,7 @@ body {
   text-decoration: line-through;
 }
 
-
+.fa-trash-can,
+.fa-square {
+  font-size: 1.2rem;
+}
