@@ -19,6 +19,10 @@ const tasksData = [
   },
 ];
 
+
+
+
+
 const textInput = document.querySelector(".textInput");
 const enterBtn = document.querySelector(".fa-left-long");
 const taskSection = document.querySelector(".taskSection");
@@ -57,5 +61,24 @@ taskSection.addEventListener("click", (e) => {
   } else if (e.target.classList.contains("fa-trash-can")) {
     tasksData.splice(taskID, 1);
     displayTask(tasksData);
+  }
+});
+
+const addTask = () => {
+  if (textInput.value) {
+    tasksData.push({
+      description: textInput.value,
+      completed: false,
+    });
+    textInput.value = "";
+    textInput.blur();
+    displayTask(tasksData);
+  }
+};
+
+enterBtn.addEventListener("click", addTask);
+textInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    addTask();
   }
 });
