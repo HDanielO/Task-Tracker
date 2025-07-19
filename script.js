@@ -1,27 +1,6 @@
 "use strict";
 
-const tasksData = [
-  {
-    description: "New Task is to be added 0 ",
-    completed: false,
-  },
-  {
-    description: "New Task is to be added 1",
-    completed: false,
-  },
-  {
-    description: "New Task is to be added 2",
-    completed: false,
-  },
-  {
-    description: "New Task is to be added 3",
-    completed: false,
-  },
-];
-
-
-
-
+let tasksData = JSON.parse(localStorage.getItem("tasksData")) || [];
 
 const textInput = document.querySelector(".textInput");
 const enterBtn = document.querySelector(".fa-left-long");
@@ -57,14 +36,17 @@ taskSection.addEventListener("click", (e) => {
     !e.target.classList.contains("fa-trash-can")
   ) {
     tasksData[taskID].completed = !tasksData[taskID].completed;
+    localStorage.setItem("tasksData", JSON.stringify(tasksData));
     displayTask(tasksData);
   } else if (e.target.classList.contains("fa-trash-can")) {
     tasksData.splice(taskID, 1);
+    localStorage.setItem("tasksData", JSON.stringify(tasksData));
     displayTask(tasksData);
   }
 });
 
 const addTask = () => {
+  tasksData = JSON.parse(localStorage.tasksData);
   if (textInput.value) {
     tasksData.push({
       description: textInput.value,
@@ -72,6 +54,7 @@ const addTask = () => {
     });
     textInput.value = "";
     textInput.blur();
+    localStorage.setItem("tasksData", JSON.stringify(tasksData));
     displayTask(tasksData);
   }
 };
