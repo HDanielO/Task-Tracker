@@ -38,7 +38,7 @@ const displayTask = function (taskArray) {
           <i class="fa-solid fa-square" id =${i}></i>
           <p class="taskContent" id =${i}>${task.description}</p>
         </div>
-        <i class="fa-solid fa-trash-can"></i>
+        <i class="fa-solid fa-trash-can" id =${i}></i>
       </div>`
     );
   });
@@ -46,39 +46,16 @@ const displayTask = function (taskArray) {
 
 displayTask(tasksData);
 
-Array.from(deleteBtns).forEach((db, i) => {
-  db.addEventListener("click", (e) => {
-    console.log(`${i}`);
-    e.stopPropagation();
-  });
-});
-
-// Array.from(tasks).forEach((taskElm, i) => {
-//   taskElm.addEventListener("click", () => {
-//     console.log(Number(taskElm.getAttribute("id")));
-
-//     tasksData[Number(taskElm.getAttribute("id"))].completed =
-//       !tasksData[Number(taskElm.getAttribute("id"))].completed;
-
-//     console.log(tasksData);
-
-//     displayTask(tasksData);
-//   });
-// });
-
 taskSection.addEventListener("click", (e) => {
-  console.log(e.target);
+  const taskID = Number(e.target.getAttribute("id"));
   if (
     !e.target.classList.contains("taskSection") &&
     !e.target.classList.contains("fa-trash-can")
   ) {
-    console.log(Number(e.target.getAttribute("id")));
-
-    tasksData[Number(e.target.getAttribute("id"))].completed =
-      !tasksData[Number(e.target.getAttribute("id"))].completed;
-
-    console.log(tasksData);
-
+    tasksData[taskID].completed = !tasksData[taskID].completed;
+    displayTask(tasksData);
+  } else if (e.target.classList.contains("fa-trash-can")) {
+    tasksData.splice(taskID, 1);
     displayTask(tasksData);
   }
 });
