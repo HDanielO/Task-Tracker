@@ -2,13 +2,13 @@
 
 ## Project URL
 
-[https://task-tracker-livid-theta.vercel.app/](https://task-tracker-livid-theta.vercel.app/)
-
-A simple task tracking web app built as a [roadmap.sh](https://roadmap.sh/projects) Frontend Developer project.
+[https://roadmap.sh/projects/task-tracker-js](https://roadmap.sh/projects/task-tracker-js)
 
 ## Live Demo
 
-[Check out the live project here!](https://task-tracker-livid-theta.vercel.app/)
+[https://task-tracker-livid-theta.vercel.app/](https://task-tracker-livid-theta.vercel.app/)
+
+A simple task tracking web app built as a [roadmap.sh](https://roadmap.sh/projects) Frontend Developer project.
 
 ## Features
 
