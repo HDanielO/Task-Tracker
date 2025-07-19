@@ -1,6 +1,10 @@
 # Task Tracker
 
-A simple task tracking web app built as a [roadmap.sh](https://roadmap.sh/projects) project.
+A simple task tracking web app built as a [roadmap.sh](https://roadmap.sh/projects) Frontend Developer project.
+
+## Live Demo
+
+[Check out the live project here!](https://task-tracker-livid-theta.vercel.app/)
 
 ## Features
 
@@ -14,12 +18,6 @@ A simple task tracking web app built as a [roadmap.sh](https://roadmap.sh/projec
 - CSS3
 - JavaScript (Vanilla)
 - [Font Awesome](https://fontawesome.com/) for icons
-
-## Getting Started
-
-1. Clone or download this repository.
-2. Open `index.html` in your web browser.
-3. Start adding your tasks!
 
 ## About roadmap.sh Projects
 
