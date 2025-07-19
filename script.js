@@ -46,7 +46,7 @@ taskSection.addEventListener("click", (e) => {
 });
 
 const addTask = () => {
-  tasksData = JSON.parse(localStorage.tasksData);
+  // tasksData = JSON.parse(localStorage.tasksData);
   if (textInput.value) {
     tasksData.push({
       description: textInput.value,
